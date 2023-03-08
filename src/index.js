@@ -1,6 +1,6 @@
 import loadHomePage from './home.js';
-import loadContactInfo from './contact.js';
 import loadMenu from './menu.js';
+import loadContactInfo from './contact.js';
 
 const tabs = document.querySelectorAll('.tab');
 for (const tab of tabs) {
@@ -11,11 +11,11 @@ for (const tab of tabs) {
             case 'home':
                 loadHomePage();
                 break;
-            case 'contact':
-                loadContactInfo();
-                break;
             case 'menu':
                 loadMenu();
+                break;
+            case 'contact':
+                loadContactInfo();
                 break;
         }
     })
@@ -27,3 +27,5 @@ function resetPage() {
         content.removeChild(content.firstChild);
     }
 }
+
+loadHomePage();
