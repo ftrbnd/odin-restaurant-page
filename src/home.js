@@ -4,16 +4,16 @@ export default function loadHomePage() {
   const header = document.createElement('div');
   header.classList.add('header');
 
+  const h1 = document.createElement('h1');
+  h1.textContent = "Raising Cane's";
+  
   const foodImage = document.createElement('img');
   foodImage.src = '../assets/food.jpeg';
   foodImage.alt = 'chicken tenders and fries';
   foodImage.id = 'food';
 
-  const h1 = document.createElement('h1');
-  h1.textContent = "Raising Cane's";
-
-  header.appendChild(foodImage);
   header.appendChild(h1);
+  header.appendChild(foodImage);
 
   const bio = document.createElement('p');
   bio.id = 'bio';
