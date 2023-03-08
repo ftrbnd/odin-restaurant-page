@@ -1,2 +1,3 @@
-console.log('Hello restaurant!');
+import loadPage from './loadPage.js';
 
+loadPage();
