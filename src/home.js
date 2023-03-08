@@ -1,6 +1,4 @@
-export default function loadPage() {
-  console.log('Loading page...');
-
+export default function loadHomePage() {
   const content = document.querySelector('div#content');
 
   const header = document.createElement('div');

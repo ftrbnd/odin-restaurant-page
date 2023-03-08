@@ -10,12 +10,34 @@ html, body {
     font-family: 'Berthold City Bold', 'Roboto', sans-serif;
 }
 
-.content {
+div#tabs {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+button.tab {
+    all: unset;
+    cursor: pointer;
+
+    text-align: center;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+button.tab:hover {
+    color: var(--main-red);
+}
+
+button.tab:active {
+    color: var(--text-dark);
+}
+
+div.content {
     display: flex;
     flex-direction: column;
 }
 
-.header {
+div.header {
     display: grid;
     grid-template-rows: 2fr auto;
     justify-items: center;
