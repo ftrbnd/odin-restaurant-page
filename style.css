@@ -2,17 +2,28 @@
     --main-red: #d71c2e;
     --text-light: white;
     --text-dark: black;
+    --background-gray: #e2e8f0;
+    --shadow-color: #e1e1e1;
 }
 
 html, body {
     margin: 0;
     padding: 0;
     font-family: 'Berthold City Bold', 'Roboto', sans-serif;
+    background-color: var(--background-gray);
 }
 
 div#tabs {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    background-color: var(--text-light);
+}
+
+img#logo {
+    height: 48px;
+    object-fit: cover;
+    object-position: center 30%;
+    padding: 1rem;
 }
 
 button.tab {
@@ -32,11 +43,6 @@ button.tab:active {
     color: var(--text-dark);
 }
 
-div.content {
-    display: flex;
-    flex-direction: column;
-}
-
 div.header {
     display: grid;
     grid-template-rows: 2fr auto;
@@ -46,6 +52,7 @@ div.header {
     color: var(--text-light);
 }
 
+/* HOME */
 img#food {
     width: 100%;
     height: 200px;
@@ -56,4 +63,47 @@ img#food {
 p#bio {
     padding: 1rem;
     margin: 0;
+}
+
+/* MENU */
+
+
+/* CONTACT */
+.cards {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, auto);
+    gap: 24px;
+    
+    padding: 4rem;
+}
+
+.card {
+    background-color: var(--text-light);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 1px 1px 2px 1px var(--shadow-color);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.card#hours {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.card#phone-email {
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.card#address {
+    grid-row: 3;
+    grid-column: 1;
+}
+
+.card#feedback {
+    grid-row: 1 / -1;
+    grid-column: 2;
 }
