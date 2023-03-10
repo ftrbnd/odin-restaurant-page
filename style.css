@@ -78,8 +78,8 @@ p#bio {
     gap: 24px;
     
     padding: 4rem;
-    padding-left: 500px;
-    padding-right: 500px;
+    padding-left: 8rem;
+    padding-right: 8rem;
 }
 
 .card {
@@ -117,8 +117,6 @@ form {
     flex-direction: column;
     gap: 4px;
 }
-
-
 
 div.inputs {
     display: flex;
