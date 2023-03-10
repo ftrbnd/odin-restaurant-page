@@ -62,6 +62,16 @@ img#food {
     object-position: center 30%;
 }
 
+div.home-item {
+    padding: 1rem;
+    background-color: var(--text-light);
+    border-radius: 15px;
+    font-weight: bold;
+    margin: 2rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
+}
+
 p#bio {
     padding: 1rem;
     margin: 0;

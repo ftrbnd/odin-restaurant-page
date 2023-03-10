@@ -15,10 +15,14 @@ export default function loadHomePage() {
   header.appendChild(h1);
   header.appendChild(foodImage);
 
+  const bioCard = document.createElement('div');
+  bioCard.classList.add('home-item')
+
   const bio = document.createElement('p');
   bio.id = 'bio';
   bio.textContent = "A Restaurant that only serves Chicken Fingers? The business plan received the lowest grade in a college class because the professor said it wouldn’t work. When he tried to get loans, the banks said no, but Todd wasn’t giving up."
+  bioCard.appendChild(bio);
 
   content.appendChild(header);
-  content.appendChild(bio);
+  content.appendChild(bioCard);
 }
