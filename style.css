@@ -67,22 +67,45 @@ p#bio {
     margin: 0;
 }
 
-/* MENU */
+.cards,
+.menu {
+    gap: 24px;
+    padding: 4rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
 
+/* MENU */
+div.menu {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
+
+.menu-item > h2, .menu-item > p, .menu-item > img {
+    padding: 0;
+    margin: 8px;
+}
+
+.menu-item#4 {
+    grid-column: 1 / -1;
+}
+
+.menu-item img {
+    height: 10rem;
+    object-fit: contain;
+    padding: 0;
+}
 
 /* CONTACT */
 .cards {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(2, auto);
-    gap: 24px;
-    
-    padding: 4rem;
-    padding-left: 8rem;
-    padding-right: 8rem;
 }
 
-.card {
+.card, .menu-item {
     background-color: var(--text-light);
     border-radius: 15px;
     padding: 2rem;
