@@ -26,10 +26,12 @@ img#logo {
     padding: 1rem;
 }
 
-button.tab {
+button {
     all: unset;
     cursor: pointer;
+}
 
+button.tab {
     text-align: center;
     padding: 1rem;
     font-weight: bold;
@@ -76,6 +78,8 @@ p#bio {
     gap: 24px;
     
     padding: 4rem;
+    padding-left: 500px;
+    padding-right: 500px;
 }
 
 .card {
@@ -106,4 +110,44 @@ p#bio {
 .card#feedback {
     grid-row: 1 / -1;
     grid-column: 2;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+
+div.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.inputs div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+input, textarea {
+    padding: 8px;
+    font-family: 'Berthold City Bold', 'Roboto', sans-serif;
+}
+
+button#submit {
+    align-self: center;
+    color: var(--text-light);
+    background-color: var(--main-red);
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+button#submit:hover {
+    color: var(--text-dark);
+}
+
+button#submit:active {
+    color: var(--text-light);
 }

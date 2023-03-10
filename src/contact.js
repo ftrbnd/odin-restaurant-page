@@ -45,12 +45,65 @@ export default function loadContactInfo() {
 
     const feedback = document.createElement('div');
     feedback.id = 'feedback';
-    const feedbackHeader = document.createElement('h2');
-    feedbackHeader.textContent = 'Feedback';
+
     const form = document.createElement('form');
     form.classList.add('feedback');
-    
-    feedback.appendChild(feedbackHeader);
+    form.action = 'https://example.com';
+    form.method = 'post';
+
+    const feedbackHeader = document.createElement('h2');
+    feedbackHeader.textContent = 'Feedback';
+
+    const inputsDiv = document.createElement('div');
+    inputsDiv.classList.add('inputs');
+
+    const nameDiv = document.createElement('div');
+    const nameLabel = document.createElement('label');
+    nameLabel.textContent = 'Name';
+    nameLabel.for = 'name';
+    const nameInput = document.createElement('input');
+    nameInput.type = 'text';
+    nameInput.id = 'name';
+    nameInput.required = true;
+    nameDiv.appendChild(nameLabel);
+    nameDiv.appendChild(nameInput);
+
+    const emailDiv = document.createElement('div');
+    const emailLabel = document.createElement('label');
+    emailLabel.textContent = 'Email';
+    emailLabel.for = 'email';
+    const emailInput = document.createElement('input');
+    emailInput.type = 'email';
+    emailInput.id = 'email';
+    emailInput.required = true;
+    emailDiv.appendChild(emailLabel);
+    emailDiv.appendChild(emailInput);
+
+    const commentDiv = document.createElement('div');
+    const commentLabel = document.createElement('label');
+    commentLabel.textContent = 'Comment';
+    commentLabel.for = 'comment';
+    const commentInput = document.createElement('textarea');
+    commentInput.rows = '25';
+    commentInput.cols = '50';
+    commentInput.style.resize = 'none';
+    commentInput.id = 'comment';
+    commentInput.required = true;
+    commentDiv.appendChild(commentLabel);
+    commentDiv.appendChild(commentInput);
+
+    const formButtonSubmit = document.createElement('button');
+    formButtonSubmit.type = 'submit';
+    formButtonSubmit.textContent = 'Submit';
+    formButtonSubmit.id = 'submit';
+
+    inputsDiv.appendChild(nameDiv);
+    inputsDiv.appendChild(emailDiv);
+    inputsDiv.appendChild(commentDiv);
+    inputsDiv.appendChild(formButtonSubmit);
+
+    form.appendChild(feedbackHeader);
+    form.appendChild(inputsDiv);
     feedback.appendChild(form);
 
     const cards = [hours, phoneEmail, address, feedback];
