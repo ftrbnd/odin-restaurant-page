@@ -88,9 +88,25 @@ p#bio {
 /* MENU */
 div.menu {
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.menu-item {
+    background-color: var(--text-light);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 1px 1px 2px 1px var(--shadow-color);
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.menu-item > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .menu-item > h2, .menu-item > p, .menu-item > img {
@@ -98,12 +114,11 @@ div.menu {
     margin: 8px;
 }
 
-.menu-item#4 {
-    grid-column: 1 / -1;
-}
+.menu-item > img {
+    grid-column: 2;
+    justify-self: center;
 
-.menu-item img {
-    height: 10rem;
+    height: 300px;
     object-fit: contain;
     padding: 0;
 }
@@ -115,7 +130,7 @@ div.menu {
     grid-template-columns: repeat(2, auto);
 }
 
-.card, .menu-item {
+.card {
     background-color: var(--text-light);
     border-radius: 15px;
     padding: 2rem;

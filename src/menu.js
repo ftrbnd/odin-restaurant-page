@@ -24,9 +24,11 @@ export default function loadMenu() {
         comboCard.classList.add('menu-item');
         comboCard.id = i;
 
+        const textCard = document.createElement('div');
+
         const h2 = document.createElement('h2');
         h2.textContent = comboName;
-        comboCard.appendChild(h2);
+        textCard.appendChild(h2);
 
         let desc, calories;
         switch (i) {
@@ -49,6 +51,8 @@ export default function loadMenu() {
             case 4:
                 desc = "2 Chicken Fingers, Crinkle-Cut Fries, One Cane's Sauce, Kids Size Drink (12 oz.)";
                 calories = '630 - 740';
+                comboCard.style.gridRow = '3';
+                comboCard.style.gridColumn = '1 / -1'
                 break;
         }
 
@@ -60,8 +64,10 @@ export default function loadMenu() {
         menuImage.alt = 'picture of menu item';
         menuImage.src = `../assets/${i}.avif`;
 
-        comboCard.appendChild(descParagraph);
-        comboCard.appendChild(calParagraph);
+        textCard.appendChild(descParagraph);
+        textCard.appendChild(calParagraph);
+
+        comboCard.appendChild(textCard);
         comboCard.appendChild(menuImage);
 
         menuItems.appendChild(comboCard);
