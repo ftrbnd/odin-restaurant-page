@@ -36,8 +36,6 @@
 ### Built With
 
 * ![JavaScript][JavaScript]
-* ![HTML][HTML]
-* ![CSS][CSS]
 
 
 ### Screenshots
